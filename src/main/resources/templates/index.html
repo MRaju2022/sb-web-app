@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Srini IT</title>
+
+<style>
+.button {
+	background-color: #008CBA;; /* Green */
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+}
+</style>
+
+</head>
+<body>
+
+	<img alt="sriniit" src="/images/Logo.jpeg" height="80" width="250">
+
+	<form th:action="@{/product}" th:object="${product}" method="POST">
+		<table>
+			<tr>
+				<td>Product Name</td>
+				<td><input type="text" th:field="*{productName}" /></td>
+			</tr>
+			<tr>
+				<td>Brand Name</td>
+				<td><input type="text" th:field="*{brandName}" /></td>
+			</tr>
+			<tr>
+				<td>Product Price</td>
+				<td><input type="text" th:field="*{productPrice}" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit" class="button"/></td>
+			</tr>
+		</table>
+	</form>
+	
+	<a href="viewProducts">View All Products</a>
+	
+	
+
+</body>
+</html>
